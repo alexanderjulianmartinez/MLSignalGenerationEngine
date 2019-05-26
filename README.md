@@ -9,4 +9,4 @@ A machine learning signal generation engine to provide fresh signals with as clo
  performance efficiency.
  - The data would be stored in a cloud-based storage, such as AWS S3.
  
- 
+*Text cleaning incomplete in preprocessing.py, left as TODO given time left. 
