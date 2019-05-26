@@ -4,6 +4,8 @@ A machine learning signal generation engine to provide fresh signals with as clo
  
  This repository contains data pipelines for ML signal generation to be used in a binary classification task setting.
  
+ Run model.py to preprocess data and train logisitic regression model.
+ 
  Storage if we want to reuse them across multiple different models for different ML tasks:
  - The generated ML signals would be stored in a cloud-based system (i.e. AWS S3) in parquet format for storage and 
  performance efficiency.
