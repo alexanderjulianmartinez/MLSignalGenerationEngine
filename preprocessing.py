@@ -20,10 +20,10 @@ class MLSignalPipeline:
         df = self.spark.read.csv("Petitions_dataset_2018_2019.csv", sep=",", inferSchema=True, header=True)
 
         # TODO: Clean up punctuation and whitespace from text
-        # columns = df.schema.names
-        # for column_name in columns:
-        #    df = df.select(lower(trim(regexp_replace(column_name, '[^A-Za-z0-9 ]+', '')).alias("cleaned_" + column_name)))
-        #    self.df.drop(column_name).collect()
+        columns = self.df.schema.names
+        for column_name in columns:
+            df = df.withcol(lower(trim(regexp_replace(column_name, '[^A-Za-z0-9 ]+', '')).alias(column_name)))
+            
         return df
 
     def tokenize_data(self):
