@@ -22,7 +22,7 @@ class MLSignalPipeline:
         # TODO: Clean up punctuation and whitespace from text
         columns = self.df.schema.names
         for column_name in columns:
-            df = df.withcol(lower(trim(regexp_replace(column_name, '[^A-Za-z0-9 ]+', '')).alias(column_name)))
+            df = df.withColumn(column_name, lower(trim(regexp_replace(column_name, '[^A-Za-z0-9 ]+', '')).alias(column_name)))
             
         return df
 
